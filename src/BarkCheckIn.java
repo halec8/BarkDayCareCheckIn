@@ -29,10 +29,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import javax.swing.JTable;
-import javax.swing.event.TableModelEvent;
 import javax.swing.table.AbstractTableModel;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableModel;
+
 
 
 /**
@@ -205,14 +203,6 @@ public class BarkCheckIn extends JFrame {
      *
      * @param args the input arguments
      */
-    public static void main(String[] args) {
-        JFrame frame = new BarkCheckIn("Bark Check In/Check Out");
-        frame.setVisible(true);
-        frame.setLocationRelativeTo(null);
-        frame.setResizable(false);
-
-
-    }
 
     private static class DogTableModel extends AbstractTableModel{
         private final String[] COLUMNS = {"ID","OWNER NAME", "OWNER EMAIL", "OWNER PHONE", "DOG NAME"};
@@ -257,6 +247,14 @@ public class BarkCheckIn extends JFrame {
                 return Object.class;
                 }
         }
+    }
+    public static void main(String[] args) {
+        JFrame frame = new BarkCheckIn("Bark Check In/Check Out");
+        frame.setVisible(true);
+        frame.setLocationRelativeTo(null);
+        frame.setResizable(false);
+
+
     }
 }
 
